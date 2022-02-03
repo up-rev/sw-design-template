@@ -12,7 +12,7 @@ To use this template, create a new repo in the bitbucket project that it is inte
 
 
 Requirements 
------------
+------------
 
 The easiest way to build this project is to use the Devcontainer:
 
@@ -114,6 +114,35 @@ Because no two projects are alike, there is no one size fits all template. Below
 
 
 
+Why Sphinx?
+-----------
+
+Using ``Sphinx`` provides a lot of benefits over Word docs:
 
 
+* **Accessibility and Project Evolution:**
+    By keeping the design doc as plain text files allows it to live in the repo alongside the code for a project. This makes it more accessible and allows us to change it as the project evolves. The docs can be built by Jenkins, and changes now go through peer review in pull requests. At the end of a project it can be delivered to the customer to provide information on the development for any future improvements or maintanence. 
+
+* **Visibility of design changes:**
+    because the document is kept in source control, any changes to the design are subjected to reviews through pull requests. 
+
+* **Flexibility:**
+    At its core Sphinx is a templating tool. It has extensions for generating the documentation in a variety of formats including HTML, PDF, Docx, and confluence. This allows us to deliver docs to customers for whatever workflow they need. 
+
+* **Effeciency:**
+    While there is a slight learning curve to start, ``Sphinx`` removes a lot of the distractions of a Word processor. The author can focus on the relevant information and not get bogged down in the formatting and aesthetics of the document. `Sphinx` projects are structures like a software project, and everything can be done in a text editor. This is a more natural workflow for a software team. 
+
+* **Cleaner Integration:**
+    The traditional workflow requires a lot of tools that are not integrated. Powerpoint, drawio, lucidchart, plantuml, etc. It’s a lot of copy/pasting images and the sources for the diagrams are discarded. Sphinx has extensions which makes connects these tools and links directly to source materials. See below for more information on these extensions.
+
+Extensions
+~~~~~~~~~~
+
+Sphinx has a number of extensions which make documentation easier to keep up to date. A few that are demonstrated in this template are:
+
+* **plantuml:** 
+    plantuml is a modeling language used often in our design documents for sequence diagrams, timing diagrams, use cases, and flow charts. The typical workflow is to write the UML, generate an image, and insert it into our documentation. This is a pain point because if you ever change the diagram, you have to repeat those steps. With the ``Sphinx`` plantuml extension, we can write the uml inline, or link to a `.puml` file, and it will render it into the document.
+
+* **drawio:**
+    Another tool used for diagraming is  the`draw.io extension for VS Code <https://marketplace.visualstudio.com/items?itemName=hediet.vscode-drawio>`_. Drawio is great for doing system diagrams and UI mockups (it has assets for all bootstrap design elements). File created with the `.dio.png` extension are png image files which can be linked in our documents, but they contain the drawio data, so the diagram can still be edited directly. 
 

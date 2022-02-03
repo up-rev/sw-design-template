@@ -1,5 +1,4 @@
-<Project Title> Software Design
-===============================
+.. include:: README.rst
 
 
 .. toctree::

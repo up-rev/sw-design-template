@@ -1,6 +1,8 @@
 Risk 
 ====
 
+.. include:: ../notes.rst
+
 Embedded 
 --------
 
