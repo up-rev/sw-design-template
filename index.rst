@@ -16,4 +16,5 @@
 
     pages/risk
     pages/estimates
+    pages/examples
 
