@@ -11,3 +11,7 @@ Some `MrT` utilities are able to generate documentation in `rst`. We can link di
     ../assets/ref/example_gatt_icd
     protocols/sequence 
 
+
+.. raw:: latex
+
+    \newpage

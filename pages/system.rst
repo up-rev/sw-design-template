@@ -17,3 +17,7 @@ Components
 
     embedded/embedded 
     mobile_app/mobile_app
+
+.. raw:: latex
+
+    \newpage

@@ -13,3 +13,8 @@ Mobile App
 ----------
 
 .. include:: mobile_app/risk.rst
+
+
+.. raw:: latex
+
+    \newpage

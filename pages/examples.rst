@@ -1,26 +1,35 @@
 Examples
 ========
 
-This page just provides some reference examples for different rst directives. For more visit https://thomas-cokelaer.info/tutorials/sphinx/rest_syntax.html
+This page just provides some reference examples for different rst directives. For more visit https://docutils.sourceforge.io/docs/ref/rst/directives.html
 
 
 *italic*
 
 **bold**
 
-`link to google <http://google.com>`_
+`link  <http://up-rev.com>`_
 
-notes
------
+Admonitions
+-----------
 
-.. note:: This is an example of the note directive 
+There are many Admonitions available ("attention", "caution", "danger", "error", "hint", "important", "note", "tip", "warning", "admonition")
+
+.. tip:: Tip of the day!
+    
+.. note:: This is an example of a note
 
 .. warning:: this is a warning 
+
+
 
 Code Snippets
 -------------
 
+syntax for many useful languages (c,javascript,python, bash, yaml, json, xml, json, etc)
+
 .. code:: c 
+    :number-lines: 1
 
     #include <stdio.h>
 
@@ -29,6 +38,28 @@ Code Snippets
         return 0;
     }
 
+.. code:: yaml
+
+    ---
+    doe: "a deer, a female deer"
+    ray: "a drop of golden sun"
+    pi: 3.14159
+    xmas: true
+    french-hens: 3
+    calling-birds:
+        - huey
+        - dewey
+        - louie
+        - fred
+    xmas-fifth-day:
+    calling-birds: four
+    french-hens: 3
+    golden-rings: 5
+    partridges:
+        count: 1
+        location: "a pear tree"
+    turtle-doves: two
+    
 
 Images
 -----
@@ -48,6 +79,10 @@ Math
 Tables 
 ------
 
+There are several ways to create a table.
+
+Method 1
+
 +------------+------------+-----------+
 | Header 1   | Header 2   | Header 3  |
 +============+============+===========+
@@ -61,6 +96,7 @@ Tables
 +------------+------------+-----------+
 
 
+Method 2 
 
 =====  =====  ======
    Inputs     Output
@@ -70,3 +106,59 @@ Tables
 False  False  False
 True   False  True
 =====  =====  ======
+
+CSV tables 
+
+.. csv-table:: a title
+   :header: "name", "firstname", "age"
+   :widths: 20, 20, 10
+
+   "Smith", "John", 40
+   "Smith", "John, Junior", 20
+
+List tables 
+
+.. list-table:: Frozen Delights!
+   :widths: 15 10 30
+   :header-rows: 1
+
+   * - Treat
+     - Quantity
+     - Description
+   * - Albatross
+     - 2.99
+     - On a stick!
+   * - Crunchy Frog
+     - 1.49
+     - If we took the bones out, it wouldn't be
+       crunchy, now would it?
+   * - Gannet Ripple
+     - 1.99
+     - On a stick!
+
+
+UML 
+---
+
+UML can be done inline, or with an external `.puml` file 
+
+.. uml:: 
+
+    @startuml
+    start
+    if (condition A) then (yes)
+    :Text 1;
+    elseif (condition B) then (yes)
+    :Text 2;
+    stop
+    (no) elseif (condition C) then (yes)
+    :Text 3;
+    (no) elseif (condition D) then (yes)
+    :Text 4;
+    else (nothing)
+    :Text else;
+    endif
+    stop
+    @enduml
+
+.. uml:: ../assets/diagrams/button.puml

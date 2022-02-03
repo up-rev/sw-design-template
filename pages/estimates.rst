@@ -12,3 +12,8 @@ Mobile App
 
 
 .. include:: mobile_app/estimates.rst
+
+
+.. raw:: latex
+
+    \newpage

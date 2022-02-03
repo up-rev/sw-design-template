@@ -1,52 +1,34 @@
-SW Design Template
-==================
+Instructions
+============
 
 This project is the template for a software design document. The project uses ``Sphinx`` to generate documents from markdown or Restructured text. 
 
-|
 
 Using the Template
 ------------------
 
-To use this template, create a new repo in the bitbucket project that it is intended for and name it <projec-name>-sw-design. Copy the contents of this template to the new project and begin changing it to meet the design needs of the project. The template pages provide instructions for each section as well as examples of the various features of restructed text and sphinx directives. 
+To use this template, fork/copy this repo into the Bitbucket project it is intended for. Then change it to meet the design needs of the project. The template pages provide examples and some Instructions on what information is needed. Make sure to follow the guidelines below and reference the `ENG-SW Design review.xlsx` checklist from sharepoint
+
+.. note:: After copying the template you can remove this README file and replace it with one for the project
 
 
-Requirements 
-------------
+Guidelines
+~~~~~~~~~~
 
-The easiest way to build this project is to use the Devcontainer:
+Because no two projects are alike, there is no one size fits all template. Below are some Guidelines to make sure documentation is consistent and complete. 
 
-#. Open this project in VS Code 
-#. Click the green "Remote Window" button in the bottom left corner 
-#. Click "Reopen in Container"
-
-This will pull the latest MrT Development container from docker hub and mount the project to it. The MrT development container has all of the dependencies and extensions installed. 
-
-The tools and extensions can also be installed manually in WSL:
-
-.. code:: bash 
-
-    sudo apt install python3-pip texlive latexmk texlive-science texlive-formats-extra plantuml
-    pip3 install sphinx sphinxcontrib-plantuml sphinx-rtd-theme
-
-
-
-
-Building 
---------
-
-The 2 most common use cases for building are HTML and pdf: 
-
-.. code:: bash 
-
-    make html
-
-.. code:: bash 
-
-    make latexpdf
-
-
-The HTML format is good for presenting the documentation and hosting it on a server, and the pdf is better for delivering and distributing as a simple document
+#. All software components of the project must be documented 
+#. All components must have a 'Development' section, complete with all of the information show in the example. If an item does not apply to the component, put N/A (do not remove items from the section)
+    * Development Environment
+    * Source Control 
+    * List of all 3rd party libraries 
+#. All embedded components must contain a 'Reusability' Section. 
+    * List all devices connected to the MCU, and Indicate if there is an existing MrT module for it 
+    * If there is not, check MrT to see if there are modules for any parts that perform the same function
+    * If there are any, provide a justification to why they are not being used.
+#. All components that a user will interact with directly must contain a 'User Interface' Section. 
+    * For IO based interface (LEDS/Buttons) the Section must document the various states indicated by the LED and the operation of the buttons 
+    * For any GUI the section must contain Mockups for all of the views and screens that will be used in the GUI. 
 
 
 Project Structure
@@ -94,23 +76,46 @@ This project is structure to split up text files and assets.
     This just contains template overrides for the base RTD theme to improve color scheme and formatting
 
 
-Guidelines
-----------
 
-Because no two projects are alike, there is no one size fits all template. Below are some Guidelines to make sure documentation is consistent and complete. 
 
-#. All software components of the project must be documented 
-#. All components must have a 'Development' section, complete with all of the information show in the example. If an item does not apply to the component, put N/A (do not remove items from the section)
-    * Development Environment
-    * Source Control 
-    * List of all 3rd party libraries 
-#. All embedded components must contain a 'Reusability' Section. 
-    * List all devices connected to the MCU, and Indicate if there is an existing MrT module for it 
-    * If there is not, check MrT to see if there are modules for any parts that perform the same function
-    * IF there are any, provide a justification to why they are not being used.
-#. All components that a user will interact with directly must contain a 'User Interface' Section. 
-    * For IO based interface (LEDS/Buttons) the Section must document the various states indicated by the LED and the operation of the buttons 
-    * For any GUI the section must contain Mockups for all of the views and screens that will be used in the GUI. 
+Building 
+--------
+
+Requirements 
+~~~~~~~~~~~~
+
+The easiest way to build this project is to use the Devcontainer:
+
+#. Open this project in VS Code 
+#. Click the green "Remote Window" button in the bottom left corner 
+#. Click "Reopen in Container"
+
+.. epigraph:: This will pull the latest MrT Development container from docker hub and mount the project to it. The MrT development container has all of the dependencies and extensions installed. 
+
+The tools and extensions can also be installed manually in WSL:
+
+.. code:: bash 
+
+    sudo apt install python3-pip texlive latexmk texlive-science texlive-formats-extra plantuml
+    pip3 install sphinx sphinxcontrib-plantuml sphinx-rtd-theme
+
+
+Build Commands 
+~~~~~~~~~~~~~~
+
+The 2 most common use cases for building are HTML and pdf: 
+
+.. code:: bash 
+
+    make html
+
+.. code:: bash 
+
+    make latexpdf
+
+
+The HTML format is good for presenting the documentation and hosting it on a server, and the pdf is better for delivering and distributing as a simple document
+
 
 
 
@@ -144,5 +149,12 @@ Sphinx has a number of extensions which make documentation easier to keep up to 
     plantuml is a modeling language used often in our design documents for sequence diagrams, timing diagrams, use cases, and flow charts. The typical workflow is to write the UML, generate an image, and insert it into our documentation. This is a pain point because if you ever change the diagram, you have to repeat those steps. With the ``Sphinx`` plantuml extension, we can write the uml inline, or link to a `.puml` file, and it will render it into the document.
 
 * **drawio:**
-    Another tool used for diagraming is  the`draw.io extension for VS Code <https://marketplace.visualstudio.com/items?itemName=hediet.vscode-drawio>`_. Drawio is great for doing system diagrams and UI mockups (it has assets for all bootstrap design elements). File created with the `.dio.png` extension are png image files which can be linked in our documents, but they contain the drawio data, so the diagram can still be edited directly. 
+    Another tool used for diagraming is  the `draw.io extension for VS Code <https://marketplace.visualstudio.com/items?itemName=hediet.vscode-drawio>`_. Drawio is great for doing system diagrams and UI mockups (it has assets for all bootstrap design elements). File created with the `.dio.png` extension are png image files which can be linked in our documents, but they contain the drawio data, so the diagram can still be edited directly. 
 
+
+
+.. the line below just forces a new page in the pdf rendering.
+
+.. raw:: latex
+
+    \newpage

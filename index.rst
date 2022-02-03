@@ -1,10 +1,11 @@
-.. include:: README.rst
-
+SW Design Template 
+==================
 
 .. toctree::
     :hidden:
     :maxdepth: 3
-
+    
+    ../README
     pages/system
     pages/protocols
 
