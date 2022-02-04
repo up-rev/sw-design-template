@@ -62,7 +62,7 @@ syntax for many useful languages (c,javascript,python, bash, yaml, json, xml, js
     
 
 Images
------
+------
 
 .. figure:: ../assets/images/logo.png
 

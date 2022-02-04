@@ -90,7 +90,7 @@ The easiest way to build this project is to use the Devcontainer:
 #. Click the green "Remote Window" button in the bottom left corner 
 #. Click "Reopen in Container"
 
-.. epigraph:: This will pull the latest MrT Development container from docker hub and mount the project to it. The MrT development container has all of the dependencies and extensions installed. 
+.. epigraph:: This will pull the latest uprev/sphinx image from docker hub, run it, and mount the project to it. This container has all of the required tools for building the project, and the VS Code extensions for creating diagrams and charts. 
 
 The tools and extensions can also be installed manually in WSL:
 

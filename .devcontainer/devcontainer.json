@@ -1,17 +1,13 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
 // https://github.com/microsoft/vscode-dev-containers/tree/v0.158.0/containers/docker-existing-dockerfile
 {
-	"name": "Sphinx Doc",
+	"name": "Uprev/Sphinx",
 
 	// Sets the run context to one level up instead of the .devcontainer folder.
 	"context": "..",
 
 	//Use published image:
-	"image": "uprev/mrt",
-
-	//Uncomment  to use local Dockerfile 
-	//"dockerFile": "../Dockerfile",
-	
+	"image": "uprev/sphinx:dev",
 	
 
 	// Set *default* container specific settings.json values on container create.
@@ -21,12 +17,10 @@
 
 	// Add the IDs of extensions you want installed when the container is created.
 	"extensions": [
-		"ms-vscode.cpptools",
-		"redhat.vscode-yaml",
-		"ms-vscode.cmake-tools",
 		"trond-snekvik.simple-rst",
 		"searking.preview-vscode",
-		"hediet.vscode-drawio"
+		"hediet.vscode-drawio",
+		"jebbs.plantuml"
 	],
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
