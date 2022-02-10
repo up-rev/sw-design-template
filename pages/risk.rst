@@ -1,6 +1,8 @@
 Risk 
 ====
 
+In this section detail the risks associated with each component.
+
 .. include:: ../notes.rst
 
 Embedded 

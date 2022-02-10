@@ -3,7 +3,7 @@ example Gatt ICD
 ================
 
 
-* Generated with ` MrT BLE Tool <https://github.com/uprev-mrt/mrtutils/wiki/mrt-ble>`_ on 02/03/22
+* Generated with ` MrT BLE Tool <https://github.com/uprev-mrt/mrtutils/wiki/mrt-ble>`_ on 02/09/22
 * CRC: na
 
 ----
@@ -131,8 +131,8 @@ Custom service for a sprinkler system
     +--------------------------------------------------------+----------------+----------------+----------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
     |**SoilType**                                            |1B4E            |uint8           |RW              |Soil type for the yard                                                                                                                               |                                                                                                                                  
     |                                                        |                |                |                | * 0x00 : **Peat** - Peat soil                                                                                                                       | 
-    |                                                        |                |                |                | * 0x01 : **Sand** - Peat soil                                                                                                                       | 
-    |                                                        |                |                |                | * 0x02 : **Clay** - Peat soil                                                                                                                       | 
+    |                                                        |                |                |                | * 0x01 : **Sand** - sandy sand                                                                                                                      | 
+    |                                                        |                |                |                | * 0x02 : **Clay** - clay                                                                                                                            | 
     |                                                        |                |                |                | * 0x03 : **TopSoil** - TopSoil                                                                                                                      | 
     +--------------------------------------------------------+----------------+----------------+----------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
 
@@ -146,7 +146,7 @@ FOTA
 ~~~~
     *  *Service UUID:* *[71a8-1b49-ce39-0088-6b62-c8ed-9A10-9a5b]*
 
-sercive for performing over the air updates
+service for performing over the air updates
 
 .. <!--*user-block-fota-start*-->
 

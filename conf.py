@@ -48,8 +48,12 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 html_theme = 'sphinx_rtd_theme'
 
 latex_elements = {
-  'extraclassoptions': 'openany,oneside'
+  'extraclassoptions': 'openany,oneside',
+  'preamble' : '\\renewcommand\FmN[1]{}'
+  
 }
+
+
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,

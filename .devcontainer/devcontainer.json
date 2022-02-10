@@ -7,7 +7,7 @@
 	"context": "..",
 
 	//Use published image:
-	"image": "uprev/sphinx:dev",
+	"image": "uprev/sphinx",
 	
 
 	// Set *default* container specific settings.json values on container create.
