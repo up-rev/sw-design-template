@@ -8,19 +8,21 @@ SW Design Template
     ../README
     pages/system
     pages/protocols
+    pages/requirements
+..    pages/features
 
 
 .. Only display the Risk and estimates in the HTML build
 
-.. only:: html
+.. .. only:: html
 
-    .. toctree::
-        :hidden:
-        :titlesonly:
-        :maxdepth: 1
+.. toctree::
+    :hidden:
+    :titlesonly:
+    :maxdepth: 1
 
-        pages/risk
-        pages/estimates
+    pages/risk
+    pages/estimates
 
 
 .. toctree::

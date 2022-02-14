@@ -64,9 +64,26 @@ syntax for many useful languages (c,javascript,python, bash, yaml, json, xml, js
 Images
 ------
 
+The 'image' and 'figure' directives allow you to insert images into your document. This also works with '.dio.png' files from draw.io 
+
+.. image:: ../assets/diagrams/system.dio.png 
+
+
 .. figure:: ../assets/images/logo.png
 
     using 'figure' directive instead of 'image' lets you add a caption 
+
+
+If you need to put an image inline with text or in a table, you can create an alias block. This is useful for showing buttons to click in instructions:
+
+.. |pic1| image:: ../assets/images/remote_button.png
+  :width: 45px 
+
+
+"To open the project in a devcontainer, click the remote window button |pic1|. "
+
+
+
 
 Math 
 ----
@@ -79,9 +96,9 @@ Math
 Tables 
 ------
 
-There are several ways to create a table.
+There are several ways to create a table. If the data already exists in another document, it can be converted to rSt format at `tableconvert.com <https://tableconvert.com/excel-to-restructuredtext>`_
 
-Method 1
+Method 1 
 
 +------------+------------+-----------+
 | Header 1   | Header 2   | Header 3  |
@@ -94,6 +111,8 @@ Method 1
 +------------+ span rows. | - contain |
 | body row 4 |            | - blocks. |
 +------------+------------+-----------+
+
+.. tip:: Method 1 is a little tedious to write out, but it is the most flexible for row/column spans.
 
 
 Method 2 
@@ -140,7 +159,7 @@ List tables
 UML 
 ---
 
-UML can be done inline, or with an external `.puml` file 
+UML can be done inline, or with an external `.puml` file. Plantuml is very useful for a lot of different diagram types such as sequence, timing, class, use case, state machines, network and many others. For more information and examples see their website `Plantuml.com <https://plantuml.com/sequence-diagram>`_
 
 .. uml:: 
 
@@ -162,3 +181,6 @@ UML can be done inline, or with an external `.puml` file
     @enduml
 
 .. uml:: ../assets/diagrams/button.puml
+
+
+.. uml:: ../assets/diagrams/led.puml
