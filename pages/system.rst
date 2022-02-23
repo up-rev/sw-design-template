@@ -13,6 +13,7 @@ Components
 ==========
 
 .. toctree::
+    :hidden:
     :maxdepth: 3
 
     embedded/embedded 
