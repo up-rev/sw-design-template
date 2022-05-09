@@ -7,5 +7,4 @@ Pairing --> Idle: complete
 Reading : 5 Seconds
 Reading --> Idle: timeout
 
-
 @enduml

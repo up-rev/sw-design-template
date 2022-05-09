@@ -8,7 +8,7 @@ Some `MrT` utilities are able to generate documentation in `rst`. We can link di
 .. toctree::
     :maxdepth: 1
 
-    ../assets/ref/example_gatt_icd
+    ../assets/icds/example_gatt_icd
     protocols/sequence 
 
 

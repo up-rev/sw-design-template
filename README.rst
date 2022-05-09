@@ -1,7 +1,7 @@
 Instructions
 ============
 
-This project is the template for a software design document. The project uses ``Sphinx`` to generate documents from markdown or Restructured text. 
+This project is the template for a software design document. The project uses ``Sphinx`` to generate documents from `Restructured text <https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html>`_. For examples of the reStructured Text features see the `Examples` Section.
 
 
 Using the Template
@@ -12,18 +12,38 @@ To use this template, fork/copy this repo into the Bitbucket project it is inten
 .. note:: After copying the template you can remove this README file and replace it with one for the project
 
 
+Audience and Purpose 
+~~~~~~~~~~~~~~~~~~~~ 
+
+The software design document is intended to provide information about the design of the software components for a system. Below is a list of target readers, and what they should gain from the document: 
+
+
+**Software Engineer -** 
+    A software engineer with no previous knowledge of this project should be able to determine what tools and environments are needed to build the software, what functions each component performs, and how the components interact. Ideally that software engineer, given only the source code and this document, should be able to update/modify and build the project.
+
+**Systems Engineer -** 
+    There should be enough detail that a systems engineer can evaluate the software design against the system requirements, and be confident that it meets them.
+
+**Project/Program Manager -**
+    A project manager should be able to read this document and determine if it is in line with the customers vision and the project requirements. They should also be able to determine if the task estimates align with the quoted value of the project, and what risks need to be tracked and mitigated.
+
+**Customer -**
+    The main reason for providing this document to customer is so that they have it and can give it to a software engineer in the future for maintanence and updates. 
+
+
 Guidelines
 ~~~~~~~~~~
 
 Because no two projects are alike, there is no one size fits all template. Below are some Guidelines to make sure documentation is consistent and complete. 
 
-#. All software components of the project must be documented 
-#. All components must have a 'Development' section, complete with all of the information show in the example. If an item does not apply to the component, put N/A (do not remove items from the section)
+#. **All software components of the project must be documented**
+#. All components must have a 'Development' section with all of the information shown in the example.
+    .. note:: If an item does not apply to the component, put N/A (do not remove items from the section)
     * Development Environment
     * Source Control 
     * List of all 3rd party libraries 
 #. All embedded components must contain a 'Reusability' Section. 
-    * List all devices connected to the MCU, and Indicate if there is an existing MrT module for it 
+    * List all devices connected to the MCU/processor, and Indicate if there is an existing MrT module for it 
     * If there is not, check MrT to see if there are modules for any parts that perform the same function
     * If there are any, provide a justification to why they are not being used.
 #. All components that a user will interact with directly must contain a 'User Interface' Section. 
@@ -34,7 +54,7 @@ Because no two projects are alike, there is no one size fits all template. Below
 Project Structure
 ~~~~~~~~~~~~~~~~~
 
-This project is structure to split up text files and assets.
+This project is structured to split up text files and assets, and organize the text files by component. 
 
 .. code:: text
 
@@ -61,7 +81,7 @@ This project is structure to split up text files and assets.
     The assets folder contains various assets (images, diagrams, etc) for the doc. 
 
 * **/pages**
-    This directory and subdirectory contains all of the pages/content for the dock.
+    This directory and subdirectory contains all of the pages/content for the document.
 
     * **/embedded** contains files for the embedded device component of the design.
     * **/mobile_app** contains files for the mobile app component of the design. 
@@ -73,7 +93,7 @@ This project is structure to split up text files and assets.
     This is the configuration file used by sphinx to set themes and include various extensions. This is also where the name of the document is set. 
 
 * **/_templates**
-    This just contains template overrides for the base RTD theme to improve color scheme and formatting
+    This just contains template overrides for the base `RTD (Read The Docs) theme <https://sphinx-rtd-theme.readthedocs.io/en/stable/>`_ to improve color scheme and formatting
 
 
 
@@ -81,7 +101,7 @@ This project is structure to split up text files and assets.
 Building 
 --------
 
-Requirements 
+Dependencies 
 ~~~~~~~~~~~~
 
 The easiest way to build this project is to use the Devcontainer:
@@ -92,7 +112,7 @@ The easiest way to build this project is to use the Devcontainer:
 
 .. epigraph:: This will pull the latest uprev/sphinx image from docker hub, run it, and mount the project to it. This container has all of the required tools for building the project, and the VS Code extensions for creating diagrams and charts. 
 
-The tools and extensions can also be installed manually in WSL:
+If you dont want to use the devcontainer, the tools and extensions can also be installed manually in linux or WSL:
 
 .. code:: bash 
 
@@ -103,7 +123,7 @@ The tools and extensions can also be installed manually in WSL:
 Build Commands 
 ~~~~~~~~~~~~~~
 
-The 2 most common use cases for building are HTML and pdf: 
+The two most common use cases for building are HTML and pdf. To build these, navigate to the root of this project and use these commands:
 
 .. code:: bash 
 
@@ -126,7 +146,7 @@ Using ``Sphinx`` provides a lot of benefits over Word docs:
 
 
 * **Accessibility and Project Evolution:**
-    By keeping the design doc as plain text files allows it to live in the repo alongside the code for a project. This makes it more accessible and allows us to change it as the project evolves. The docs can be built by Jenkins, and changes now go through peer review in pull requests. At the end of a project it can be delivered to the customer to provide information on the development for any future improvements or maintanence. 
+    By keeping the design document as plain text files allows it to live in the repo alongside the code for a project. This makes it more accessible and allows us to change it as the project evolves. The docs can be built by Jenkins, and changes now go through peer review in pull requests. At the end of a project it can be delivered to the customer to provide information on the development for any future improvements or maintanence. 
 
 * **Visibility of design changes:**
     because the document is kept in source control, any changes to the design are subjected to reviews through pull requests. 
