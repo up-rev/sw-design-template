@@ -1,9 +1,7 @@
 Development information
 -----------------------
 
-..  Mandatory Section for all components
-
-This section will include the development and source control information for the project
+The project will be developed using STM32CubeIDE and the STM32 Libraries. The project will include a Dockerfile for building a container that is capable of building and deploying the firmware. 
 
 
 =================                ======================================================================
@@ -23,9 +21,9 @@ This section will include the development and source control information for the
 **Source Control** 
 --------------------------------------------------------------------------------------------------------
 ==================                ======================================================================
-**Repo**                          Bitbucket (cloud)         
+**Repo**                          Bitbucket (Local Server)         
 **Issue tracking**                Jira
-**Reviews**                       Bitbucket (cloud)
+**Reviews**                       Bitbucket (Local Server)
 ==================                ======================================================================
 
 
@@ -33,13 +31,16 @@ This section will include the development and source control information for the
 
 
 
-==================  =========================== ======================================================================
+========================================================  =========================== ======================================================================
 **Third Party Libraries & Frameworks**
-----------------------------------------------------------------------------------------------------------------------
-**Library**         **License**                 **Notes**
-==================  =========================== ======================================================================
-z-lib                MIT                        https://github.com/madler/zlib
-==================  =========================== ======================================================================
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+**Library**                                               **License**                 **Notes**
+========================================================  =========================== ======================================================================
+`NanoPB <https://github.com/nanopb/nanopb>`_              Zlib                        C implementation of protobuf library
+`FreeType <https://freetype.org/>`_                       GNU Public                  TrueType Font rendering Library 
+`FatFS <http://elm-chan.org/fsw/ff/00index_e.html>`_      BSD                         Fat File System library
+`lwIP <https://git.savannah.nongnu.org/cgit/lwip.git>`_   BSD                         TCP/IP stack 
+========================================================  =========================== ======================================================================
 
 
 
