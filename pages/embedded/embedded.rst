@@ -1,11 +1,7 @@
-Embedded Firmware
-=================
- 
-The Embedded component consists of a device with a display and four buttons to provide an interface to the remote host. The processor used will be the STM32H745XIHx. 
+Embedded Device
+===============
 
-The customer will be taking over development for the application level code, and Up-Rev will the scope of this effort is just to support board bring up and ensure that there are sufficient drivers for the interfaces.
-
-
+In this section you would write a brief description of the current component.
 
 .. figure:: ../../assets/diagrams/embedded.dio.png 
 
@@ -13,8 +9,8 @@ The customer will be taking over development for the application level code, and
 
 
 .. include:: development.rst
+.. include:: reusability.rst
 .. include:: ui.rst
-.. include:: requirements.rst
 
 
 .. below is just a way to force a new page in the pdf rendering

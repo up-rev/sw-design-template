@@ -5,25 +5,25 @@ SW Design Template
     :maxdepth: 3
     
     pages/system
-..    pages/protocols
+    pages/protocols
     pages/requirements
 
 
 .. Only display the Risk and estimates in the HTML build
 
-.. .. only:: html
+.. only:: html
 
-..     .. toctree::
-..         :titlesonly:
-..         :maxdepth: 1
+    .. toctree::
+        :titlesonly:
+        :maxdepth: 1
 
-..         pages/risk
-..         pages/estimates
+        pages/risk
+        pages/estimates
 
 
-..     .. toctree::
-..         :titlesonly:
-..         :maxdepth: 1
+    .. toctree::
+        :titlesonly:
+        :maxdepth: 1
 
-..         pages/examples
+        pages/examples
 

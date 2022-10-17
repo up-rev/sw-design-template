@@ -17,7 +17,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'FCD SW design'
+project = 'SW Design Template'
 author = 'Jason Berger'
 
 
